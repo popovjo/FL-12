@@ -1,0 +1,92 @@
+.info {
+  width: 25%;
+  margin: 0 auto;
+}
+
+.game-name {
+  text-align: center;
+}
+
+.process {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.player.black {
+  text-decoration: underline;
+}
+
+.winner {
+  font-size: 20px;
+  margin: 20px 0;
+  text-align: center;
+  opacity: 0;
+}
+
+#board {
+  width: 600px;
+  margin: 0 auto;
+}
+
+canvas {
+  position: absolute;
+  z-index: 1;
+  background-color: #956e52;
+}
+
+.items {
+  position: relative;
+  z-index: 2;
+  top: 18px;
+  left: 18px;
+}
+
+.items > div {
+  display: flex;
+}
+
+.cell {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+}
+
+.cell::after {
+  content: '';
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-image: linear-gradient(315deg, #dadada, #fff);
+}
+
+.cell:hover::after {
+  opacity: 0.3;
+}
+
+.cell.black::after {
+  opacity: 1;
+  box-shadow: inset 16px 16px 10px 1px #000, 
+              -3px -3px 3px -2px #353232;
+}
+
+.cell.white::after {
+  opacity: 1;
+  box-shadow: inset 16px 16px 10px 1px #ddd, 
+              -3px -3px 3px -2px #353232
+}
+
+.cell.cell-winner::after {
+  opacity: 1;
+  box-shadow: inset 16px 16px 10px 4px rgb(150, 15, 0), 
+              -3px -3px 3px -2px #353232
+}

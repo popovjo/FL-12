@@ -1,0 +1,30 @@
+input {
+    margin: 5px;
+  }
+  
+  .un-read {
+    width: 400px;
+    height: 150px;
+    margin: 5px auto;
+    border: 2px solid red;
+    position: relative;
+  }
+  
+  .un-read::before {
+    content: 'UNREAD';
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+  
+  .read {
+    width: 400px;
+    height: 150px;
+    margin: 5px auto;
+    border: 2px solid green;
+  }
+  
+  .add-btn {
+    float: right;
+  }
+

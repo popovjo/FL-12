@@ -1,0 +1,32 @@
+body {
+    font-size: 18px;
+}
+p {
+    height: 30px;
+    margin: 0;
+    cursor: pointer;
+}
+ul {
+    list-style: none;
+}
+i {
+    color: #edbc0b;
+    vertical-align: text-bottom;
+}
+.folder:hover,
+.file:hover {
+    background-color: #efefef;
+}
+
+.file i {
+    color: #bbbbbb;
+}
+.empty {
+    font-style: italic;
+}
+.closed {
+    display: none;
+}
+.open {
+    display: block;
+}
